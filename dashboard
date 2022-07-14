@@ -1,0 +1,1741 @@
+{
+  "type": "execute_events",
+  "data": {
+    "events": [
+      {
+        "type": "cards_tracking",
+        "data": {
+          "tracks": [
+            {
+              "melidata": {
+                "path": "/cards/hybrid/dashboard",
+                "params": {
+                  "minicard_status": "virtual_only",
+                  "flap_status": "virtual_active",
+                  "credits": {
+                    "load_mode": "async"
+                  },
+                  "activities_status": "activities",
+                  "credit_activities_status": "credit_activities",
+                  "dashboard_status": "minicard, flap, credits, activities, credit_activities, feedback",
+                  "from": "unknown"
+                }
+              },
+              "analytics": {
+                "path": "/CARDS/HYBRID/DASHBOARD/",
+                "dimensions": {
+                  "3": "load_mode_async",
+                  "76": "unknown",
+                  "80": "minicard, flap, credits, activities, credit_activities, feedback"
+                }
+              },
+              "type": "VIEW"
+            }
+          ]
+        }
+      },
+      {
+        "type": "reload",
+        "tracking": {
+          "tracks": [
+            {
+              "provider": "no_track"
+            }
+          ]
+        },
+        "data": {
+          "bricks": [
+            {
+              "id": "dashboard_container",
+              "ui_type": "container",
+              "bricks": [
+                {
+                  "id": "dashboard_header",
+                  "ui_type": "header",
+                  "data": {
+                    "standard_header": {
+                      "title": "Cartão Mercado Pago",
+                      "tint_color": "#FFFFFF",
+                      "header_color": "#01B0EA",
+                      "status_bar_color": "#01B0EA",
+                      "mode": "collapsed",
+                      "navigation": {
+                        "behavior": "back",
+                        "accessibility_text": "",
+                        "disable_default": false,
+                        "events": []
+                      },
+                      "actions": [
+                        {
+                          "text": "",
+                          "icon": "cards_engagement_help_icon",
+                          "accessibility_text": "",
+                          "events": [
+                            {
+                              "type": "deeplink",
+                              "tracking": {
+                                "tracks": [
+                                  {
+                                    "provider": "melidata",
+                                    "data": {
+                                      "type": "event",
+                                      "path": "/cards/hybrid/dashboard/header_help"
+                                    }
+                                  },
+                                  {
+                                    "provider": "google_analytics",
+                                    "data": {
+                                      "type": "event",
+                                      "data": {
+                                        "category": "CARDS",
+                                        "action": "DASHBOARD_HELP_HEADER_ACTION"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "data": {
+                                "url": "mercadopago://webview?title=Ajuda&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fajuda%2F_16110&use_web_title=false",
+                                "external": false,
+                                "mode": "push"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "id": "dashboard_list_container",
+                  "ui_type": "list",
+                  "bricks": [
+                    {
+                      "id": "x_small_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "x-small"
+                      }
+                    },
+                    {
+                      "id": "cards_dashboard_mp",
+                      "ui_type": "cards_realestate",
+                      "data": {
+                        "id": "6fd7e417-f6eb-4f3a-8880-400b10930a3b"
+                      }
+                    },
+                    {
+                      "id": "x_small_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "x-small"
+                      }
+                    },
+                    {
+                      "id": "mini_card",
+                      "ui_type": "cards_mini_card_v5",
+                      "data": {
+                        "background_color": "#232A37",
+                        "background_image": "minicard_dashboard_background",
+                        "height": 108,
+                        "sections": [
+                          {
+                            "type": "buttons",
+                            "value": {
+                              "height": 68,
+                              "buttons": [
+                                {
+                                  "type": "standard_button",
+                                  "value": {
+                                    "single_text": {
+                                      "text": "Cartão virtual",
+                                      "color": "#FFFFFF",
+                                      "size": 14,
+                                      "font": "ProximaNova-Semibold",
+                                      "alignment": ""
+                                    },
+                                    "icon": "minicard_dashboard_icon_virtual",
+                                    "link": "mercadopago://cards-engagement/hybrid/setup-virtual/card-hub?from=dashboard_mini_card",
+                                    "animation_icon": "",
+                                    "accessibility_text": "Cartão virtual",
+                                    "event": {
+                                      "type": "execute_events",
+                                      "tracking": {
+                                        "tracks": [
+                                          {
+                                            "provider": "google_analytics",
+                                            "data": {
+                                              "type": "event",
+                                              "data": {
+                                                "category": "CARDS",
+                                                "action": "DASHBOARD_MINICARD_TAP",
+                                                "label": "CARD_DATA"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "provider": "melidata",
+                                            "data": {
+                                              "type": "event",
+                                              "path": "/cards/hybrid/dashboard/mini_card/tap",
+                                              "event_data": {
+                                                "action": "card_data"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "data": {
+                                        "events": [
+                                          {
+                                            "type": "deeplink",
+                                            "data": {
+                                              "url": "mercadopago://cards-engagement/hybrid/setup-virtual/card-hub?from=dashboard_mini_card",
+                                              "external": false,
+                                              "mode": "push"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "top_text": {
+                                      "text": "Cartão",
+                                      "color": "#FFFFFF",
+                                      "size": 14,
+                                      "font": "ProximaNova-Semibold",
+                                      "alignment": ""
+                                    },
+                                    "bottom_text": {
+                                      "text": "virtual",
+                                      "color": "#FFFFFF",
+                                      "size": 14,
+                                      "font": "ProximaNova-Semibold",
+                                      "alignment": ""
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "nfc_button",
+                                  "value": {
+                                    "card_status": {
+                                      "has_nfc_card": false,
+                                      "has_active_nfc_card": false,
+                                      "has_pin": false
+                                    },
+                                    "semaphore": {
+                                      "configured": {
+                                        "top_text": {
+                                          "text": "Aproxime o",
+                                          "color": "#FFFFFF",
+                                          "size": 14,
+                                          "font": "ProximaNova-Semibold",
+                                          "alignment": ""
+                                        },
+                                        "bottom_text": {
+                                          "text": "celular e pague",
+                                          "color": "#FFFFFF",
+                                          "size": 14,
+                                          "font": "ProximaNova-Semibold",
+                                          "alignment": ""
+                                        },
+                                        "icon": "card_row_nfc",
+                                        "accessibility_text": "Aproxime o celular e pague",
+                                        "animation_icon": "nfc_ready",
+                                        "link": "mercadopago://nfc-payments/payment?from=dashboard_mini_card",
+                                        "event": {
+                                          "type": "execute_events",
+                                          "tracking": {
+                                            "tracks": [
+                                              {
+                                                "provider": "google_analytics",
+                                                "data": {
+                                                  "type": "event",
+                                                  "data": {
+                                                    "category": "CARDS",
+                                                    "action": "DASHBOARD_MINICARD_TAP",
+                                                    "label": "NFC_CONFIGURED"
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "provider": "melidata",
+                                                "data": {
+                                                  "type": "event",
+                                                  "path": "/cards/hybrid/dashboard/mini_card/tap",
+                                                  "event_data": {
+                                                    "action": "nfc_configured"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          "data": {
+                                            "events": [
+                                              {
+                                                "type": "deeplink",
+                                                "data": {
+                                                  "url": "mercadopago://nfc-payments/payment?from=dashboard_mini_card",
+                                                  "external": false,
+                                                  "mode": "push"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "not_configured": {
+                                        "top_text": {
+                                          "text": "Aproxime o",
+                                          "color": "#FFFFFF",
+                                          "size": 14,
+                                          "font": "ProximaNova-Semibold",
+                                          "alignment": ""
+                                        },
+                                        "bottom_text": {
+                                          "text": "celular e pague",
+                                          "color": "#FFFFFF",
+                                          "size": 14,
+                                          "font": "ProximaNova-Semibold",
+                                          "alignment": ""
+                                        },
+                                        "icon": "card_row_nfc",
+                                        "accessibility_text": "Aproxime o celular e pague",
+                                        "animation_icon": "nfc_pulse",
+                                        "link": "mercadopago://nfc-payments/onboarding?from=dashboard_mini_card",
+                                        "event": {
+                                          "type": "execute_events",
+                                          "tracking": {
+                                            "tracks": [
+                                              {
+                                                "provider": "google_analytics",
+                                                "data": {
+                                                  "type": "event",
+                                                  "data": {
+                                                    "category": "CARDS",
+                                                    "action": "DASHBOARD_MINICARD_TAP",
+                                                    "label": "NFC_NOT_CONFIGURED"
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "provider": "melidata",
+                                                "data": {
+                                                  "type": "event",
+                                                  "path": "/cards/hybrid/dashboard/mini_card/tap",
+                                                  "event_data": {
+                                                    "action": "nfc_not_configured"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          "data": {
+                                            "events": [
+                                              {
+                                                "type": "deeplink",
+                                                "data": {
+                                                  "url": "mercadopago://nfc-payments/onboarding?from=dashboard_mini_card",
+                                                  "external": false,
+                                                  "mode": "push"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "without_nfc": {
+                                        "top_text": {
+                                          "text": "Aproxime o",
+                                          "color": "#FFFFFF",
+                                          "size": 14,
+                                          "font": "ProximaNova-Semibold",
+                                          "alignment": ""
+                                        },
+                                        "bottom_text": {
+                                          "text": "celular e pague",
+                                          "color": "#FFFFFF",
+                                          "size": 14,
+                                          "font": "ProximaNova-Semibold",
+                                          "alignment": ""
+                                        },
+                                        "icon": "card_row_nfc",
+                                        "accessibility_text": "Aproxime o celular e pague",
+                                        "animation_icon": "",
+                                        "link": "mercadopago://nfc-payments/crosselling?from=dashboard_mini_card",
+                                        "event": {
+                                          "type": "execute_events",
+                                          "tracking": {
+                                            "tracks": [
+                                              {
+                                                "provider": "google_analytics",
+                                                "data": {
+                                                  "type": "event",
+                                                  "data": {
+                                                    "category": "CARDS",
+                                                    "action": "DASHBOARD_MINICARD_TAP",
+                                                    "label": "WITHOUT_NFC"
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "provider": "melidata",
+                                                "data": {
+                                                  "type": "event",
+                                                  "path": "/cards/hybrid/dashboard/mini_card/tap",
+                                                  "event_data": {
+                                                    "action": "without_nfc"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          "data": {
+                                            "events": [
+                                              {
+                                                "type": "deeplink",
+                                                "data": {
+                                                  "url": "mercadopago://nfc-payments/crosselling?from=dashboard_mini_card",
+                                                  "external": false,
+                                                  "mode": "push"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "highlightedrow",
+                            "value": {
+                              "height": 40,
+                              "image": "minicard_dashboard_wheel",
+                              "title": {
+                                "text": "Configurações",
+                                "color": "#FFFFFF",
+                                "size": 12,
+                                "font": "ProximaNova-Semibold",
+                                "alignment": ""
+                              },
+                              "chevron": true,
+                              "link": "mercadopago://cards-engagement/hybrid/cards-options?from=dashboard_mini_card",
+                              "background_color": "#33FFFFFF",
+                              "accessibility_text": "Configurações",
+                              "event": {
+                                "type": "execute_events",
+                                "tracking": {
+                                  "tracks": [
+                                    {
+                                      "provider": "google_analytics",
+                                      "data": {
+                                        "type": "event",
+                                        "data": {
+                                          "category": "CARDS",
+                                          "action": "DASHBOARD_MINICARD_TAP",
+                                          "label": "OPTIONS"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "provider": "melidata",
+                                      "data": {
+                                        "type": "event",
+                                        "path": "/cards/hybrid/dashboard/mini_card/tap",
+                                        "event_data": {
+                                          "action": "options"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "data": {
+                                  "events": [
+                                    {
+                                      "type": "deeplink",
+                                      "data": {
+                                        "url": "mercadopago://cards-engagement/hybrid/cards-options?from=dashboard_mini_card",
+                                        "external": false,
+                                        "mode": "push"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "large_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "large"
+                      }
+                    },
+                    {
+                      "id": "credits_title",
+                      "ui_type": "cards_title",
+                      "data": {
+                        "text": "Função crédito"
+                      }
+                    },
+                    {
+                      "id": "small_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "small"
+                      }
+                    },
+                    {
+                      "id": "credits_container_layout_id",
+                      "ui_type": "credits_container_layout",
+                      "data": {
+                        "background_color": "#ededed",
+                        "horizontal": false,
+                        "padding": null,
+                        "padding_top": "none",
+                        "padding_bottom": "large",
+                        "padding_left": "large",
+                        "padding_right": "large",
+                        "full_screen": false
+                      },
+                      "bricks": [
+                        {
+                          "id": "credits_horizontal_container_layout_id",
+                          "ui_type": "credits_container_layout",
+                          "data": {
+                            "background_color": "#ededed",
+                            "horizontal": true,
+                            "padding": "none",
+                            "padding_top": null,
+                            "padding_bottom": null,
+                            "padding_left": null,
+                            "padding_right": null,
+                            "full_screen": true
+                          },
+                          "bricks": [
+                            {
+                              "id": "credits_circular_chart_skeleton_card_id",
+                              "ui_type": "credits_card",
+                              "data": {
+                                "title": null,
+                                "link": null,
+                                "style": "elevated",
+                                "padding": "small",
+                                "hierarchy": "primary",
+                                "event": null,
+                                "type": "none"
+                              },
+                              "bricks": [
+                                {
+                                  "id": "credits_status_circle_chart_skeleton_id",
+                                  "ui_type": "credits_status_chart_skeleton",
+                                  "data": {
+                                    "chart_shape": "CIRCLE"
+                                  },
+                                  "bricks": null
+                                }
+                              ]
+                            },
+                            {
+                              "id": "credits_bar_chart_skeleton_card_id",
+                              "ui_type": "credits_card",
+                              "data": {
+                                "title": null,
+                                "link": null,
+                                "style": "elevated",
+                                "padding": "small",
+                                "hierarchy": "primary",
+                                "event": null,
+                                "type": "none"
+                              },
+                              "bricks": [
+                                {
+                                  "id": "credits_status_rect_chart_skeleton_id",
+                                  "ui_type": "credits_status_chart_skeleton",
+                                  "data": {
+                                    "chart_shape": "RECT"
+                                  },
+                                  "bricks": null
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "credits_payment_summary_skeleton_card_id",
+                          "ui_type": "credits_card",
+                          "data": {
+                            "title": null,
+                            "link": null,
+                            "style": "elevated",
+                            "padding": "none",
+                            "hierarchy": "primary",
+                            "event": null,
+                            "type": "none"
+                          },
+                          "bricks": [
+                            {
+                              "id": "credits_payment_summary_skeleton_id",
+                              "ui_type": "credits_payment_summary_skeleton",
+                              "data": {
+                                "show_header": true
+                              },
+                              "bricks": null
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "large_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "large"
+                      }
+                    },
+                    {
+                      "id": "gamification_v1",
+                      "ui_type": "gamification_v1",
+                      "data": {
+                        "header": {
+                          "title": {
+                            "text": "Minhas missões",
+                            "color": "#FFFFFF",
+                            "font": "ProximaNova-Semibold",
+                            "alignment": "left"
+                          },
+                          "background_color": "#009EE3"
+                        },
+                        "body": {
+                          "description": {
+                            "text": "Pagamento por aproximação",
+                            "alignment": "left"
+                          },
+                          "content": {
+                            "text": "Inove seu jeito de pagar com celular e com toda a segurança que precisa",
+                            "alignment": "left"
+                          },
+                          "badge": {
+                            "text": "Nova missão",
+                            "type": "accent",
+                            "pillHierarchy": "quiet",
+                            "pillSize": "small"
+                          },
+                          "link_button": {
+                            "label": {
+                              "text": "Começar",
+                              "color": "#009EE3"
+                            },
+                            "event": {},
+                            "icon": "ic_feedback_moneyin_congrats"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "large_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "large"
+                      }
+                    },
+                    {
+                      "id": "activities_title",
+                      "ui_type": "cards_title",
+                      "data": {
+                        "text": "Seus gastos"
+                      }
+                    },
+                    {
+                      "id": "small_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "small"
+                      }
+                    },
+                    {
+                      "id": "activities",
+                      "ui_type": "activities",
+                      "data": {
+                        "tabs": [
+                          {
+                            "tab": {
+                              "text": "Débito"
+                            },
+                            "activities": [
+                              {
+                                "id": "mp_card-9b5335415d9dbecbf93f876c952b93e4cef1d45c",
+                                "title": "Reembolso de mp *Enriquefbjgh",
+                                "icon": "operation_activitycommons_ic_merchant_order",
+                                "status": "",
+                                "statusColor": "gray",
+                                "amount": {
+                                  "currency_id": "BRL",
+                                  "symbol": "R$",
+                                  "symbol_text": "Real",
+                                  "fraction": "1",
+                                  "decimal_separator": ",",
+                                  "cents": "00",
+                                  "cents_text": ""
+                                },
+                                "amount_text": "R$ 1,00",
+                                "date": "04 de julho",
+                                "date_color": null,
+                                "event": {
+                                  "type": "deeplink",
+                                  "data": {
+                                    "url": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-detail%2Fmp_card-9b5335415d9dbecbf93f876c952b93e4cef1d45c",
+                                    "external": false,
+                                    "mode": "push"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "mp_card-68cac714f9e0768ebdc628afcb034cd97e25d348",
+                                "title": "Mp *Enriquefbjgh",
+                                "icon": "operation_activitycommons_ic_merchant_order",
+                                "status": "Pagamento cancelado",
+                                "statusColor": "gray",
+                                "amount": {
+                                  "currency_id": "BRL",
+                                  "symbol": "R$",
+                                  "symbol_text": "Real",
+                                  "fraction": "-1",
+                                  "decimal_separator": ",",
+                                  "cents": "00",
+                                  "cents_text": ""
+                                },
+                                "amount_text": "-R$ 1,00",
+                                "date": "04 de julho",
+                                "date_color": null,
+                                "event": {
+                                  "type": "deeplink",
+                                  "data": {
+                                    "url": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-detail%2Fmp_card-68cac714f9e0768ebdc628afcb034cd97e25d348",
+                                    "external": false,
+                                    "mode": "push"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "mp_card-dccb8842f59858b9e1ba5e0da93cd9d616d65c13",
+                                "title": "Reembolso de mp *Enriquefbjgh",
+                                "icon": "operation_activitycommons_ic_merchant_order",
+                                "status": "",
+                                "statusColor": "gray",
+                                "amount": {
+                                  "currency_id": "BRL",
+                                  "symbol": "R$",
+                                  "symbol_text": "Real",
+                                  "fraction": "3",
+                                  "decimal_separator": ",",
+                                  "cents": "00",
+                                  "cents_text": ""
+                                },
+                                "amount_text": "R$ 3,00",
+                                "date": "29 de junho",
+                                "date_color": null,
+                                "event": {
+                                  "type": "deeplink",
+                                  "data": {
+                                    "url": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-detail%2Fmp_card-dccb8842f59858b9e1ba5e0da93cd9d616d65c13",
+                                    "external": false,
+                                    "mode": "push"
+                                  }
+                                }
+                              }
+                            ],
+                            "footer": {
+                              "text": "Ver todos",
+                              "event": {
+                                "type": "deeplink",
+                                "data": {
+                                  "url": "mercadopago://webview?title=Seus%20gastos&url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-list%3Fclient%3Dmpcardmlb%26filterPreset%3DmpCardDebit&use_web_title=false",
+                                  "external": false,
+                                  "mode": "push"
+                                }
+                              },
+                              "icon": "cards_engagement_footer_chevron"
+                            }
+                          },
+                          {
+                            "tab": {
+                              "text": "Crédito"
+                            },
+                            "activities": [
+                              {
+                                "id": "mp_credit_card-cd866fce1c1dc046249757c00e7d435276a472d8",
+                                "title": "MP *ENRIQUEFBJGH         OSASCO       BR",
+                                "icon": "operation_activitycommons_ic_merchant_order",
+                                "status": null,
+                                "statusColor": null,
+                                "amount": {
+                                  "currency_id": "BRL",
+                                  "symbol": "R$",
+                                  "symbol_text": "Real",
+                                  "fraction": "-2",
+                                  "decimal_separator": ",",
+                                  "cents": "00",
+                                  "cents_text": ""
+                                },
+                                "amount_text": "-R$ 2,00",
+                                "date": "24 de junho",
+                                "date_color": null,
+                                "event": {
+                                  "type": "deeplink",
+                                  "data": {
+                                    "url": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-detail%2Fmp_credit_card-cd866fce1c1dc046249757c00e7d435276a472d8",
+                                    "external": false,
+                                    "mode": "push"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "mp_credit_card-7c0f820412f1478d8438a14e94e0615bf159b5f0",
+                                "title": "MP *CARDSNFC             SAO JOSE DOS BR",
+                                "icon": "operation_activitycommons_ic_merchant_order",
+                                "status": "Recusado",
+                                "statusColor": "gray",
+                                "amount": {
+                                  "currency_id": "BRL",
+                                  "symbol": "R$",
+                                  "symbol_text": "Real",
+                                  "fraction": "-1",
+                                  "decimal_separator": ",",
+                                  "cents": "16",
+                                  "cents_text": ""
+                                },
+                                "amount_text": "-R$ 1,16",
+                                "date": "06 de junho",
+                                "date_color": null,
+                                "event": {
+                                  "type": "deeplink",
+                                  "data": {
+                                    "url": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-detail%2Fmp_credit_card-7c0f820412f1478d8438a14e94e0615bf159b5f0",
+                                    "external": false,
+                                    "mode": "push"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "mp_credit_card-19765ae75f3183070f00ce30fc95044d61ce1332",
+                                "title": "MP *CARDSNFC             SAO JOSE DOS BR",
+                                "icon": "operation_activitycommons_ic_merchant_order",
+                                "status": "Recusado",
+                                "statusColor": "gray",
+                                "amount": {
+                                  "currency_id": "BRL",
+                                  "symbol": "R$",
+                                  "symbol_text": "Real",
+                                  "fraction": "-1",
+                                  "decimal_separator": ",",
+                                  "cents": "15",
+                                  "cents_text": ""
+                                },
+                                "amount_text": "-R$ 1,15",
+                                "date": "06 de junho",
+                                "date_color": null,
+                                "event": {
+                                  "type": "deeplink",
+                                  "data": {
+                                    "url": "mercadopago://webview?url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-detail%2Fmp_credit_card-19765ae75f3183070f00ce30fc95044d61ce1332",
+                                    "external": false,
+                                    "mode": "push"
+                                  }
+                                }
+                              }
+                            ],
+                            "footer": {
+                              "text": "Ver todos",
+                              "event": {
+                                "type": "deeplink",
+                                "data": {
+                                  "url": "mercadopago://webview?title=Seus%20gastos&url=https%3A%2F%2Fwww.mercadopago.com.br%2Factivities%2Fwebview-list%3Fclient%3Dmpcardmlb%26filterPreset%3DmpCardCredit&use_web_title=false",
+                                  "external": false,
+                                  "mode": "push"
+                                }
+                              },
+                              "icon": "cards_engagement_footer_chevron"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "small_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "small"
+                      }
+                    },
+                    {
+                      "id": "cards_linear_dashboard_container",
+                      "ui_type": "cards_linear_container",
+                      "bricks": [
+                        {
+                          "id": "cards_text",
+                          "ui_type": "cards_text",
+                          "data": {
+                            "text": "Estes temas podem ser do seu interesse",
+                            "alignment": "left",
+                            "margins": {
+                              "left": 16,
+                              "right": 12,
+                              "top": 12,
+                              "bottom": 12
+                            },
+                            "style": "title-16"
+                          }
+                        },
+                        {
+                          "id": "select_button",
+                          "ui_type": "cards_row_default",
+                          "data": {
+                            "label": "Como acesso os dados do meu cartão virtual",
+                            "enabled": true,
+                            "show_chevron": true,
+                            "event": {
+                              "type": "deeplink",
+                              "tracking": {
+                                "tracks": [
+                                  {
+                                    "provider": "melidata",
+                                    "data": {
+                                      "type": "event",
+                                      "path": "/cards/hybrid/dashboard/contextual_help",
+                                      "event_data": {
+                                        "faq_id": 22464
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "provider": "google_analytics",
+                                    "data": {
+                                      "type": "event",
+                                      "dimensions": {
+                                        "86": "22464"
+                                      },
+                                      "data": {
+                                        "category": "CARDS",
+                                        "action": "DASHBOARD_CONTEXTUAL_HELP"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "data": {
+                                "url": "mercadopago://webview?title=Ajuda&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fajuda%2F22464&use_web_title=false",
+                                "external": false,
+                                "mode": "push"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "select_button",
+                          "ui_type": "cards_row_default",
+                          "data": {
+                            "label": "O que é pagamento por aproximação com celular",
+                            "enabled": true,
+                            "show_chevron": true,
+                            "event": {
+                              "type": "deeplink",
+                              "tracking": {
+                                "tracks": [
+                                  {
+                                    "provider": "melidata",
+                                    "data": {
+                                      "type": "event",
+                                      "path": "/cards/hybrid/dashboard/contextual_help",
+                                      "event_data": {
+                                        "faq_id": 18982
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "provider": "google_analytics",
+                                    "data": {
+                                      "type": "event",
+                                      "dimensions": {
+                                        "86": "18982"
+                                      },
+                                      "data": {
+                                        "category": "CARDS",
+                                        "action": "DASHBOARD_CONTEXTUAL_HELP"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "data": {
+                                "url": "mercadopago://webview?title=Ajuda&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fajuda%2F18982&use_web_title=false",
+                                "external": false,
+                                "mode": "push"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "select_button",
+                          "ui_type": "cards_row_default",
+                          "data": {
+                            "label": "O que é app padrão para pagar por aproximação",
+                            "enabled": true,
+                            "show_chevron": true,
+                            "event": {
+                              "type": "deeplink",
+                              "tracking": {
+                                "tracks": [
+                                  {
+                                    "provider": "melidata",
+                                    "data": {
+                                      "type": "event",
+                                      "path": "/cards/hybrid/dashboard/contextual_help",
+                                      "event_data": {
+                                        "faq_id": 22553
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "provider": "go ogle_analytics",
+                                    "data": {
+                                      "type": "event",
+                                      "dimensions": {
+                                        "86": "22553"
+                                      },
+                                      "data": {
+                                        "category": "CARDS",
+                                        "action": "DASHBOARD_CONTEXTUAL_HELP"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "data": {
+                                "url": "mercadopago://webview?title=Ajuda&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fajuda%2F22553&use_web_title=false",
+                                "external": false,
+                                "mode": "push"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "bottom_text",
+                          "ui_type": "cards_text",
+                          "data": {
+                            "text": "Ir para outros temas de ajuda",
+                            "alignment": "left",
+                            "margins": {
+                              "left": 14,
+                              "right": 12,
+                              "top": 12,
+                              "bottom": 12
+                            },
+                            "style": "body-14",
+                            "text_color": "#009EE3",
+                            "events": [
+                              {
+                                "type": "deeplink",
+                                "tracking": {
+                                  "tracks": [
+                                    {
+                                      "provider": "melidata",
+                                      "data": {
+                                        "type": "event",
+                                        "path": "/cards/hybrid/dashboard/more_help",
+                                        "event_data": {
+                                          "faq_id": 16110
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "provider": "google_analytics",
+                                      "data": {
+                                        "type": "event",
+                                        "dimensions": {
+                                          "86": "16110"
+                                        },
+                                        "data": {
+                                          "category": "CARDS",
+                                          "action": "DASHBOARD_CONTEXTUAL_MORE_HELP"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "data": {
+                                  "url": "mercadopago://webview?title=Ajuda&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fajuda%2F_16110&use_web_title=false",
+                                  "external": false,
+                                  "mode": "push"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "id": "small_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "small"
+                      }
+                    },
+                    {
+                      "id": "cards_feedback",
+                      "ui_type": "cards_feedback",
+                      "data": {
+                        "text": "Fale sobre sua experiência com a função crédito e nos ajude a melhorar.",
+                        "button": {
+                          "label": "Contar minha experiência",
+                          "event": {
+                            "type": "deeplink",
+                            "tracking": {
+                              "tracks": [
+                                {
+                                  "provider": "melidata",
+                                  "data": {
+                                    "type": "event",
+                                    "path": "/cards/hybrid/dashboard/feedback/credit/tap",
+                                    "event_data": {
+                                      "action": "research_form"
+                                    }
+                                  }
+                                },
+                                {
+                                  "provider": "google_analytics",
+                                  "data": {
+                                    "type": "event",
+                                    "data": {
+                                      "category": "/CARDS/HYBRID/DASHBOARD/FEEDBACK/CREDIT/TAP/",
+                                      "action": "PRIMARY",
+                                      "label": "RESEARCH_FORM"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "data": {
+                              "url": "mercadopago://webview?title=Cart%C3%A3o%20Mercado%20Pago&use_web_title=false&url=https%3A%2F%2Fencuestas.mercadolibre.com%2Fs3%2FFeedback-in-app-TC-MLB-Dashboard%3Fcb%3Dmercadopago%253A%252F%252Fcards-engagement%252Fhybrid%252Fdashboard%253Ffrom%253Dfeedback_dashboard_credit%26cust_id%3D681593455",
+                              "external": false,
+                              "mode": "push"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "large_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "large"
+                      }
+                    },
+                    {
+                      "id": "medium_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "medium"
+                      }
+                    },
+                    {
+                      "id": "cards_linear_deashboard_container",
+                      "ui_type": "cards_linear_container",
+                      "bricks": [
+                        {
+                          "id": "cancel_button",
+                          "ui_type": "cards_row_default",
+                          "data": {
+                            "label": "Cancelar cartão",
+                            "icon": "cards_engagement_security_options_card_cancel",
+                            "enabled": true,
+                            "show_chevron": true,
+                            "event": {
+                              "type": "deeplink",
+                              "tracking": {
+                                "tracks": [
+                                  {
+                                    "provider": "melidata",
+                                    "data": {
+                                      "type": "event",
+                                      "path": "/cards/hybrid/dashboard/linear_buttons/tap",
+                                      "event_data": {
+                                        "action": "block"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "provider": "google_analytics",
+                                    "data": {
+                                      "type": "event",
+                                      "data": {
+                                        "category": "/CARDS/HYBRID/DASHBOARD/LINEAR_BUTTONS/TAP/",
+                                        "action": "ROW",
+                                        "label": "BLOCK"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "data": {
+                                "url": "mercadopago://cards-engagement/hybrid/block-card/card-hub?flow=hybrid_hub&from=dashboard",
+                                "external": false,
+                                "mode": "push"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "id": "medium_separator",
+                      "ui_type": "cards_separator",
+                      "data": {
+                        "size": "medium"
+                      }
+                    }
+                  ],
+                  "data": {
+                    "background_color": "#EDEDED",
+                    "reload_event": {
+                      "type": "request",
+                      "data": {
+                        "base_url": "https://api.mercadopago.com",
+                        "path": "/cards/wrapper/hybrid/mlb/dashboard",
+                        "method": "GET",
+                        "query_params": [],
+                        "path_params": [],
+                        "body_params": [],
+                        "header_params": [
+                          {
+                            "key": "x-lab-scope",
+                            "storage_key": "",
+                            "value": "test4"
+                          }
+                        ],
+                        "body": {},
+                        "loading_mode": "custom",
+                        "error_events": [
+                          {
+                            "type": "show_snackbar",
+                            "data": {
+                              "text": "Ocorreu um erro. Por favor, tente novamente.",
+                              "style": "error",
+                              "duration": ""
+                            }
+                          }
+                        ],
+                        "authentication_mode": "authenticated"
+                      }
+                    },
+                    "scrolling": {
+                      "visible": false,
+                      "overscroll": false
+                    },
+                    "separator": {
+                      "disabled": true
+                    }
+                  }
+                }
+              ],
+              "data": {
+                "background_color": "#EDEDED"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "post_notification",
+        "data": {
+          "name": "close_virtual_onboarding",
+          "notification_data": {}
+        }
+      },
+      {
+        "type": "cards_prefetch_icon",
+        "data": {
+          "icons": [
+            "cards_engagement_setup_physical_card",
+            "cards_engagement_security_options_lock",
+            "cards_engagement_security_options_withdraw_limit",
+            "cards_engagement_security_options_pin",
+            "cards_engagement_options_list_money_in",
+            "cards_engagement_options_list_wallet",
+            "cards_engagement_security_options_card_cancel",
+            "cards_engagement_setup_logo_visa",
+            "cards_engagement_card_status_visa_warning",
+            "cards_engagement_block_card_warning_card",
+            "cards_engagement_block_card_virtual"
+          ]
+        }
+      },
+      {
+        "type": "cards_lifecycle",
+        "data": {
+          "brick_id": "dashboard_container",
+          "refresh": {
+            "type": "cards_refresh_event_performer",
+            "data": {
+              "brick_id": "dashboard_container",
+              "refresh_types": {
+                "default": {
+                  "type": "request",
+                  "data": {
+                    "base_url": "https://api.mercadopago.com",
+                    "path": "/cards/wrapper/hybrid/mlb/dashboard",
+                    "method": "GET",
+                    "query_params": [
+                      {
+                        "key": "refresh_mode",
+                        "value": "update"
+                      },
+                      {
+                        "key": "banner_type",
+                        "value": ""
+                      }
+                    ],
+                    "path_params": [],
+                    "body_params": [],
+                    "header_params": [
+                      {
+                        "key": "x-lab-scope",
+                        "storage_key": "",
+                        "value": "test4"
+                      }
+                    ],
+                    "body": {},
+                    "loading_mode": "custom",
+                    "error_events": [
+                      {
+                        "type": "show_snackbar",
+                        "data": {
+                          "text": "Ocorreu um erro. Por favor, tente novamente.",
+                          "style": "error",
+                          "duration": ""
+                        }
+                      }
+                    ],
+                    "authentication_mode": "authenticated"
+                  }
+                },
+                "reload": {
+                  "type": "execute_events",
+                  "data": {
+                    "events": [
+                      {
+                        "type": "reload",
+                        "data": {
+                          "bricks": [
+                            {
+                              "id": "dashboard_container",
+                              "ui_type": "container",
+                              "bricks": [
+                                {
+                                  "id": "dashboard_header",
+                                  "ui_type": "header",
+                                  "data": {
+                                    "standard_header": {
+                                      "title": "Cartão Mercado Pago",
+                                      "tint_color": "#FFFFFF",
+                                      "header_color": "#01B0EA",
+                                      "status_bar_color": "#01B0EA",
+                                      "mode": "collapsed",
+                                      "navigation": {
+                                        "behavior": "back",
+                                        "accessibility_text": "",
+                                        "disable_default": false,
+                                        "events": []
+                                      },
+                                      "actions": [
+                                        {
+                                          "text": "",
+                                          "icon": "cards_engagement_help_icon",
+                                          "accessibility_text": "",
+                                          "events": [
+                                            {
+                                              "type": "deeplink",
+                                              "tracking": {
+                                                "tracks": [
+                                                  {
+                                                    "provider": "melidata",
+                                                    "data": {
+                                                      "type": "event",
+                                                      "path": "/cards/hybrid/dashboard/header_help"
+                                                    }
+                                                  },
+                                                  {
+                                                    "provider": "google_analytics",
+                                                    "data": {
+                                                      "type": "event",
+                                                      "data": {
+                                                        "category": "CARDS",
+                                                        "action": "DASHBOARD_HELP_HEADER_ACTION"
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              "data": {
+                                                "url": "mercadopago://webview?title=Ajuda&url=https%3A%2F%2Fwww.mercadopago.com.br%2Fajuda%2F_16110&use_web_title=false",
+                                                "external": false,
+                                                "mode": "push"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "dashboard_list_container",
+                                  "ui_type": "list",
+                                  "bricks": [
+                                    {
+                                      "id": "cards_dashboard_skeleton",
+                                      "ui_type": "cards_dashboard_skeleton"
+                                    }
+                                  ],
+                                  "data": {
+                                    "scrolling": {
+                                      "visible": true,
+                                      "overscroll": true
+                                    },
+                                    "separator": {
+                                      "disabled": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "data": {
+                                "background_color": ""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "request",
+                        "data": {
+                          "base_url": "https://api.mercadopago.com",
+                          "path": "/cards/wrapper/hybrid/mlb/dashboard",
+                          "method": "GET",
+                          "query_params": [],
+                          "path_params": [],
+                          "body_params": [],
+                          "header_params": [
+                            {
+                              "key": "x-lab-scope",
+                              "storage_key": "",
+                              "value": "test4"
+                            }
+                          ],
+                          "body": {},
+                          "loading_mode": "custom",
+                          "error_events": [
+                            {
+                              "type": "show_snackbar",
+                              "data": {
+                                "text": "Ocorreu um erro. Por favor, tente novamente.",
+                                "style": "error",
+                                "duration": ""
+                              }
+                            }
+                          ],
+                          "authentication_mode": "authenticated"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "register_bricks",
+        "tracking": {
+          "tracks": [
+            {
+              "provider": "no_track"
+            }
+          ]
+        },
+        "data": {
+          "bricks": [
+            {
+              "id": "cards_account_info_container",
+              "ui_type": "container",
+              "bricks": [
+                {
+                  "id": "cards_account_info_brick",
+                  "ui_type": "cards_account_info_brick",
+                  "data": {
+                    "header_title": "Sua conta digital, seu jeito",
+                    "items": [
+                      {
+                        "icon": "cards_engagement_account_info_card",
+                        "text": "Sua conta 100% grátis com um cartão sem custo para usar seu dinheiro."
+                      },
+                      {
+                        "icon": "cards_engagement_account_info_wallet",
+                        "text": "Leve seu dinheiro e seus cartões sempre com você, diretamente no app."
+                      },
+                      {
+                        "icon": "cards_engagement_account_info_graph",
+                        "text": "Gere rendimentos superiores aos da poupança automaticamente e tenha o dinheiro sempre disponível."
+                      },
+                      {
+                        "icon": "cards_engagement_account_info_bag",
+                        "text": "Recarregue o celular, pague em lojas, no Mercado Livre ou envie dinheiro para quem quiser."
+                      },
+                      {
+                        "icon": "cards_engagement_account_info_trophy",
+                        "text": "Tenha acesso a promoções e benefícios exclusivos."
+                      }
+                    ],
+                    "title": "Deposite dinheiro à sua conta",
+                    "sub_title": "Você pode fazer isso via TED, com boleto bancário ou em uma lotérica.",
+                    "button": {
+                      "label": "Depositar dinheiro",
+                      "event": {
+                        "type": "deeplink",
+                        "tracking": {
+                          "tracks": [
+                            {
+                              "provider": "google_analytics",
+                              "data": {
+                                "type": "event",
+                                "data": {
+                                  "category": "CARDS",
+                                  "action": "DASHBOARD_ACCOUNT_INFO_TAP",
+                                  "label": "MONEY_IN"
+                                }
+                              }
+                            },
+                            {
+                              "provider": "melidata",
+                              "data": {
+                                "type": "event",
+                                "path": "/cards/hybrid/dashboard/account_info/tap",
+                                "event_data": {
+                                  "action": "money_in"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "data": {
+                          "url": "mercadopago://money-in/payment-methods-dashboard",
+                          "external": false,
+                          "mode": "push"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "data": {
+                "background_color": "#FFFFFF"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "request",
+        "data": {
+          "base_url": "https://api.mercadopago.com",
+          "method": "GET",
+          "timeout": null,
+          "path": "/credit-card-mock/mobile/dashboard",
+          "authentication_mode": "authenticated",
+          "loading_mode": "custom",
+          "loading_events": [],
+          "error_mode": "custom",
+          "error_events": [
+            {
+              "type": "reload",
+              "data": {
+                "bricks": [
+                  {
+                    "id": "credits_container_layout_id",
+                    "ui_type": "credits_container_layout",
+                    "data": {
+                      "background_color": "#ededed",
+                      "horizontal": false,
+                      "padding": null,
+                      "padding_top": "none",
+                      "padding_bottom": "large",
+                      "padding_left": "large",
+                      "padding_right": "large",
+                      "full_screen": false
+                    },
+                    "bricks": [
+                      {
+                        "id": "credits_error_card_id",
+                        "ui_type": "credits_card",
+                        "data": {
+                          "title": null,
+                          "link": null,
+                          "style": "elevated",
+                          "padding": "medium",
+                          "hierarchy": "primary",
+                          "event": null,
+                          "type": "none"
+                        },
+                        "bricks": [
+                          {
+                            "id": "credits_information_id",
+                            "ui_type": "credits_information",
+                            "data": {
+                              "thumbnail": {
+                                "image": "credit_card_error_icon",
+                                "accent_color": null,
+                                "type": "icon",
+                                "hierarchy": "default",
+                                "size": "size_48",
+                                "state": "enabled"
+                              },
+                              "title": "<font color=\"#333333\">Ocorreu um erro ao carregar a seção</font>",
+                              "body": "<font color=\"#8c8c8c\">Estamos trabalhando para resolver o problema. Precisa de ajuda para conferir seu limite, data de fechamento e vencimento da fatura ou para pagá-la?</font>",
+                              "button": {
+                                "text": "Fale conosco",
+                                "hierarchy": "transparent",
+                                "event": {
+                                  "type": "credits_show_phone_dialer",
+                                  "data": {
+                                    "phone_number": "08006377246"
+                                  },
+                                  "tracking": {
+                                    "tracks": [
+                                      {
+                                        "provider": "melidata",
+                                        "data": {
+                                          "type": "event",
+                                          "path": "/credits/credit_card/dashboard/fallback_dialer_button_action",
+                                          "event_data": {
+                                            "error": {
+                                              "cause": "dashboard",
+                                              "type": "internal_error"
+                                            }
+                                          },
+                                          "experiments": null
+                                        }
+                                      },
+                                      {
+                                        "provider": "google_analytics",
+                                        "data": {
+                                          "type": "event",
+                                          "dimensions": {
+                                            "67": "internal_error_dashboard"
+                                          },
+                                          "data": {
+                                            "category": "credit_card_dashboard",
+                                            "action": "dialer_button_action",
+                                            "label": ""
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "is_enabled": true
+                              },
+                              "background_color": "#ffffff"
+                            },
+                            "bricks": null
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "tracking": {
+                "tracks": [
+                  {
+                    "provider": "melidata",
+                    "data": {
+                      "type": "view",
+                      "path": "/credits/credit_card/dashboard",
+                      "event_data": {
+                        "error": {
+                          "cause": "dashboard",
+                          "type": "internal_error"
+                        }
+                      },
+                      "experiments": null
+                    }
+                  },
+                  {
+                    "provider": "google_analytics",
+                    "data": {
+                      "type": "view",
+                      "dimensions": {
+                        "67": "internal_error_dashboard"
+                      },
+                      "data": {
+                        "page": "/CREDITS/CREDIT_CARD/DASHBOARD/"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "query_params": [],
+          "path_params": [],
+          "body_params": [],
+          "headers": [],
+          "body": null
+        },
+        "tracking": {
+          "tracks": [
+            {
+              "provider": "melidata",
+              "data": {
+                "type": "event",
+                "path": "/credits/credit_card/dashboard/load_credit_sections_event",
+                "event_data": {},
+                "experiments": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "tracking",
+        "data": null,
+        "tracking": {
+          "tracks": [
+            {
+              "provider": "melidata",
+              "data": {
+                "type": "event",
+                "path": "/credits/credit_card/dashboard",
+                "event_data": {},
+                "experiments": [
+                  {
+                    "name": "credit-card/dashboard_async_load",
+                    "variant_id": "8347"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
